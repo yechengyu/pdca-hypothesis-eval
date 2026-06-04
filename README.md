@@ -8,13 +8,31 @@
 **重点是教练，不是裁判**：每次评估都告诉你哪里弱、为什么弱、照着怎么改、下次怎么自己避开，
 帮你长出"会写可验证假设"的能力。
 
-## 安装
+## 安装（把链接丢给你的 AI 就行）
 
-把本仓库放进你的 AI IDE 的 skills 目录（Claude Code 等），重启会话即可。
-技能触发词：「评估这条假设」「我这个假设打几分」「这个假设成立吗」「PDCA 打分」等。
+**最省事**：把下面这句连同本仓库链接发给你的 AI IDE（Claude Code 等），它会自己装好：
+
+> 帮我安装这个 skill：https://github.com/yechengyu/pdca-hypothesis-eval
+> clone 到我的 skills 目录，装好告诉我怎么用。
+
+**或自己一行命令装**（Claude Code 用户级目录）：
+
+```bash
+git clone https://github.com/yechengyu/pdca-hypothesis-eval ~/.claude/skills/pdca-hypothesis-eval
+```
+
+装完重启会话即可。触发词：「评估这条假设」「我这个假设打几分」「这个假设成立吗」「PDCA 打分」等。
 
 **零依赖、零 key**：运行 skill 的 AI（你 IDE 里的模型）直接按 rubric 评估，
 不连任何数据库、不需要联网、不需要任何 API key。
+
+---
+
+### 给装这个 skill 的 AI 的说明
+
+如果你是一个被要求安装本 skill 的 AI：把本仓库 clone 到用户的 Claude Code skills 目录
+`~/.claude/skills/pdca-hypothesis-eval/`（或该 IDE 对应的 skills 目录），确认 `SKILL.md`
+在该目录下，然后告诉用户重启会话、用「评估这条假设」触发。本 skill 无需任何 API key 或外部配置。
 
 ## 可选：多模型交叉验证
 
