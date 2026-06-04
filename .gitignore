@@ -1,0 +1,10 @@
+.env
+__pycache__/
+*.pyc
+*-workspace/
+.DS_Store
+/tmp/
+
+# 运行时/个人校准数据（每个安装者各自累积，不随 skill 分发）
+references/calibration_feedback.jsonl
+references/calibration_state.json
